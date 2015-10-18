@@ -103,7 +103,7 @@
       text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     }
 
-    article h1, article h3, .footer h3 {
+    article h1, article h3, .footer h3, .footer.thought h1 {
       font-family: "Sofia", "PT Serif", Georgia, "Times New Roman", serif;
     }
 
@@ -132,6 +132,17 @@
       background-color: white;
     }
 
+    .footer.simple.arch img {
+      padding-top: 50px;
+      width: 70%;
+    }
+
+    .footer.person {
+      padding: 20px 0;
+      background-color: black;
+      display: none;
+    }
+
     .footer p {
       width: 570px;
       margin: 0 auto;
@@ -140,14 +151,6 @@
     .footer a {
       margin-bottom: 5px;
       display: block;
-    }
-
-    .footer.sunshine {
-      padding: 60px 0;
-      background: url('sunrays.png');
-      background-color: #FFD90F;
-      background-size: 100% 100%;
-      background-repeat: no-repeat;
     }
 
     .footer.greeting {
@@ -231,8 +234,6 @@
 
       <article id="article">
 
-
-
         <h1 class="title">Becoming What We Are</h1>
 
         <p>If you stroll through a large art museum, you will notice that Van Gogh does not paint the same world as Rembrandt, Picasso does not see things the way Goya did, Georgia O'Keefe doesn't much resemble Rivera, Salvador Dali looks like nobody but himself, and, in general, no world-class artist became a "classic" by doing what somebody else had already done or even what everybody else in his/her own era did.</p>
@@ -276,6 +277,12 @@
 
     </div>
 
+     <div class="footer person" id="einstein">
+
+      <img src="einstein.jpg">
+
+    </div>
+
     <div class="footer">
 
       <h2>More papers about happiness and other things</h2>
@@ -298,9 +305,26 @@
     </div>
 
 
-    <div class="footer sunshine">
 
-      <img src="sunshine.png" width="400px">
+
+    <div class="footer simple arch">
+
+      <img src="architecture.png">
+
+    </div>
+
+    <div class="footer thought">
+
+    <h1>Random thought</h1>
+      <!-- <img src="sunshine.png" width="400px"> -->
+      <p>There is a time for being ahead,</p>
+      <p>A time for being behind;</p>
+      <p>A time for being in motion,</p>
+      <p>A time for being at rest;</p>
+      <p>A time for being vigorous,</p>
+      <p>A time for being exhausted;</p>
+      <p>A time for being safe,</p>
+      <p>A time for being in danger.</p>
 
     </div>
 
@@ -316,13 +340,14 @@
     var button = document.getElementById("more")
     var article = document.getElementsByClassName("article_inner")[0]
 
-    var colors = ["#B54568", "#4DB57A", "#4372B5", "#B54528", "#655CB5"]
+    var colors = ['#B54568', '#4DB57A', '#4372B5', '#B54528', '#655CB5']
     var color = colors[Math.floor(colors.length * Math.random())]
-    document.getElementById("intro").style.backgroundColor = color
+    document.getElementById('intro').style.backgroundColor = color
     button.style.backgroundColor = color
 
-    button.addEventListener("click", function(e) {
+    button.addEventListener('click', function(e) {
       article.style.display = 'block';
+      document.getElementById('einstein').style.display = 'block';
       button.style.display = 'none';
     }, false);
 
