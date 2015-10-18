@@ -5,39 +5,67 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
   <title>Subcults</title>
+  <!-- Brands and People as Brands -->
   <link rel="shortcut icon" href="/favicon.ico" />
 
    <style>
+
+    @font-face {
+      font-family: 'ProximaNova';
+      font-weight: 300;
+      src: url('./fonts/ProximaNova-Regular.otf');
+    }
+
+    @font-face {
+      font-family: 'Lato';
+      font-weight: 300;
+      src: url('./fonts/Lato-Regular.ttf');
+    }
+
+    @font-face {
+      font-family: 'Sofia';
+      font-weight: 300;
+      src: url('./fonts/Sofia-Regular.otf');
+    }
+
+    @font-face {
+      font-family: 'Merriweather';
+      font-weight: 300;
+      src: url('./fonts/MerriweatherSans-Regular.otf');
+    }
+
     body {
-	  background: #C7C7C7 url('bg.jpg') top no-repeat;
-	  margin-top: 0px;
-	  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      margin: 0;
+      padding: 0;
+	    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     }
 
-    .logo {
-      margin-top: 380px;
+    .logo img {
+      width: 400px;
     }
 
-    .box, .box2 {
+    .main {
+      background: #C7C7C7 url('bg.jpg') top no-repeat;
+      text-align: center;
+      padding: 180px 0 180px 0;
+      margin: 0;
+    }
+
+    .box {
       padding: 5px 10px;
       border-radius: 4px;
       color: white;
-      background-color: #334138;
-      width: 380px;
+      /*background-color: #334138;*/
+      /*width: 380px;*/
       opacity: 0.75;
       text-align: justify;
     }
 
     .box {
-      font-size: 1.1em;
-      margin-top: 60px;
-      display: none;
-    }
-
-    .box2 {
       text-align: center;
-      background-color: #22769E;
+      /*background-color: #22769E;*/
       color: white;
+      opacity: 0.6;
       margin-top: 20px;
       font-size: 0.9em;
     }
@@ -45,6 +73,115 @@
     a, a:active {
       color: #222;
     }
+
+    .article_wrapper {
+      margin: 0;
+      background-color: #FEFEFE;
+    }
+
+    article {
+      font-family: "Lato", "PT Serif", Georgia, "Times New Roman", serif;
+      font-size: 1.2em;
+      width: 40%;
+      margin: 0 auto;
+      padding: 40px 120px 40px 120px;
+      border-left: 1px solid #D2D2D2;
+      border-right: 1px solid #D2D2D2;
+      background-color: white;
+      color: #333;
+    }
+
+    article h1, article h3 {
+      font-family: "Sofia", "PT Serif", Georgia, "Times New Roman", serif;
+    }
+
+    article h1 {
+      margin-top: -95px;
+      color: white;
+    }
+
+    .footer {
+      font-family: "Lato", "PT Serif", Georgia, "Times New Roman", serif;
+      padding: 100px 0;
+      font-size: 1.1em;
+      background-color: #ddd;
+      text-align: center;
+      width: 100%;
+    }
+
+    .footer.other {
+      background-color: white;
+      color: white;
+    }
+
+    .footer p {
+      width: 570px;
+      margin: 0 auto;
+    }
+
+    .footer.sunshine {
+      padding: 60px 0;
+      background-color: #FFD90F;
+    }
+
+    .footer.greeting {
+      padding: 60px 0;
+      background-color: #142F4E;
+      color: white;
+      border-bottom: 15px solid gray;
+    }
+
+    button {
+      background-color: #5C5DCE;
+      color: white;
+      padding: 20px 92px;
+      border: 0;
+      font-size: 1.3em;
+    }
+
+    button:hover {
+      cursor: pointer;
+      background-color: #424294;
+    }
+
+    @media (max-width: 444px) {
+      .logo img {
+        width: 90%;
+      }
+      .main {
+        padding-top: 30px;
+      }
+    }
+
+    @media (max-width: 720px) {
+      /*article h1 {
+        margin-top: -100px; /* OPO issue
+      }*/
+
+      article {
+        width: 90%;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .footer {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .footer p {
+        width: 80%;
+      }
+    }
+
+    @media (max-width: 1000px) {
+      article {
+        width: 80%;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+
    </style>
 
 
@@ -52,26 +189,148 @@
 
  <body>
 
-    <center>
-    <div class="logo">
-       <img src="logo_white.png" border=0 width="400px">
-    </div>
+    <div class="main">
 
-    <div class="box">
-    There are two truths: objective and our poetic interpretations which are the things that make us alive and human. We can indirectly influence our future with our thinking and this is an artform we can only strive to master, it is our personal singularity.
-    </div>
+      <div class="logo">
+         <img src="logo_white.png" border=0 >
+      </div>
 
-     <div class='box2'>
-     Somewhere, something incredible is waiting to be known.
-    <br>
-     <div style='margin-left: 280px; margin-top: 5px;'>— Carl Sagan</div>
+     <div class='box'>
+      <iframe src="//fast.wistia.net/embed/iframe/v01bzsviws" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="640" height="480"></iframe><script src="//fast.wistia.net/assets/external/E-v1.js" async></script>
      </div>
 
-   <!--  <div class='box2'>
-    Random fact: You may enjoy a <a target='_new' href="https://www.youtube.com/watch?v=_91hNV6vuBY">song</a> or <a target='_new' href="https://www.youtube.com/watch?v=xouGyn5Wfn0">two</a> as well.
-    </div> -->
+    </div>
 
-    </center>
+    <div class="article_wrapper">
+
+      <article id="article">
+
+        <div class="inner">
+
+        <h1>Becoming What We Are</h1>
+
+        <p>If you stroll through a large art museum, you will notice that Van Gogh does not paint the same world as Rembrandt, Picasso does not see things the way Goya did, Georgia O'Keefe doesn't much resemble Rivera, Salvador Dali looks like nobody but himself, and, in general, no world-class artist became a "classic" by doing what somebody else had already done or even what everybody else in his/her own era did.</p>
+
+        <p>And in science, the names of Einstein, Dirac, the Curies, Bohr, Heisenberg, Schroedinger, John Bell etc. live on because none of them took Newton as Holy Gospel: they all made unique and unpredictable innovations in basic theory.</p>
+
+        <p>And, in case you think this applies only to "arts and sciences," consider the most successful people in industry. Henry Ford did not get rich copying Fulton's steamboat; he made a car so cheap that anybody could afford one. Howard Hughes produced movies that nobody else would have dared to attempt, and then went on to revolutionize the airline industry. Buckminster Fuller did not copy the cubical form of previous architects, but invented the geodesic dome; at last count, over 3OO,OOO of his buildings existed, making him the most visibly successful architect in history. Steve Wozniak did not copy the computers of his day, but invented one that even an "bloody eejit" [like me] could use [and even enjoy!] Bill Gates created new kinds of software. Etc.</p>
+
+        <p>We all need constant reiteration of these truism because we live in a world where a multitude of very powerful forces have worked upon us, from birth through school to work, attempting to suppress our individuality, our creativity and, above all, our curiosity — in short, to destroy everything that encourages us to think for ourselves.</p>
+
+        <p>Our parents wanted us to act like the other children in our neighborhood; they emphatically did not want a boy or girl who seemed "weird or "different" or [Heaven forefend] "too damned clever by far."</p>
+
+        <p>Then we enter grade school, a fate worse than Death and Hell combined. Whether we land in a public school or a private religious school, we learn two basic lessons: 1) There exists one correct answer for every question; and 2) education consists of memorizing the one correct answer and regurgitating it on an "examination."</p>
+
+        <p>The same tactics continue through high school and, except in a few sciences, even to the university.</p>
+
+        <p>All through this "education" we find ourselves bombarded by organized religion. Most religions, in this part of the world, also teach us "one correct answer," which we should accept with blind faith; worse, they attempt to terrorize us with threats of post-mortem roasting, toasting and charbroiling if we ever dare to think at all, at all.</p>
+
+        <p>After 18-to-30+ years of all this, we enter the job market, and learn to become, or try to become, almost deaf, dumb and blind. We must always tell our "superiors" what they want to hear, what suits their prejudices and/or their wishful fantasies. If we notice something they don't want to know about, we learn to keep our mouths shut. If we don't — </p>
+
+        <p>"One more word, Bumstead, and I'll fire you!"</p>
+
+        <p>As my mahatma guru J.R. "Bob" Dobbs says, "You know how dumb the average guy is? Well, mathematically, by definition, half of them are even dumber than that."</p>
+
+        <p>"Bob" may have the average confused with the median, but otherwise he hit a bull's eye. Half of the people you meet do indeed seem dumber than a box of rocks; but they did not start out that way. Parents, peers, schools, churches, advertisers and jobs made them that way. Every baby at birth has a relentlessly curious and experimental temperament. It takes the first third of our lives to destroy that curiosity and experimentalism; but in most cases, we become placid parts of a docile herd.</p>
+
+        <p>This human herd all started out as potential geniuses, before the tacit conspiracy of social conformity blighted their brains. All of them can redeem that lost freedom, if they work at it hard enough.</p>
+
+        <p>I've worked at it for 5O+ years now, and still find parts of me acting like a robot or a zombie on occasion. Learning "how to become what you are" [in Nietzsche's phrase] takes a lifetime, but it still seems the best game in town.</p>
+
+        <h3>by Robert Anton Wilson</h3>
+
+        </div>
+
+        <button id="less">Less</button>
+
+      </article>
+
+
+    </div>
+
+    <div class="footer">
+
+      <h2>More papers about happiness and other things</h2>
+
+        <a href="papers/Mark S. Granovetter - The Strength of Weak Ties (1973).pdf">Mark S. Granovetter - The Strength of Weak Ties (1973)</a>
+        <br>
+        <a href="papers/Stafford Beer - Designing Freedom (1995).pdf">Stafford Beer - Designing Freedom (1995)</a>
+
+      <!-- <button>More</button> -->
+
+    </div>
+
+    <div id="intro" class="footer other">
+
+      <h2>It is not hard...</h2>
+
+      <p>The little house where I have come to live alone for a few weeks sits on the edge of a steep hill in a quiet village on the western coast of Chile. Huge majestic waves roll into the bay and crash magnificently over the rocks, sparkling white against the green sea under a winter sun. It is for me a time of peace, a time to clear the head, a time to treasure...</p>
+
+    </div>
+
+
+    <div class="footer sunshine">
+
+      <img src="sunshine.png" width="400px">
+
+    </div>
+
+    <div class="footer greeting">
+
+      <h2>Thank you, come again</h2>
+
+    </div>
+
+
+
+
+  <script>
+  function scrollToTop(scrollDuration) {
+      var scrollStep = -window.scrollY / (scrollDuration / 15),
+          scrollInterval = setInterval(function(){
+          if ( window.scrollY != 0 ) {
+              window.scrollBy( 0, scrollStep );
+          }
+          else clearInterval(scrollInterval);
+      },15);
+  }
+
+  function scrollToTopEase(scrollDuration) {
+      const   scrollHeight = window.scrollY,
+              scrollStep = Math.PI / ( scrollDuration / 15 ),
+              cosParameter = scrollHeight / 2;
+      var     scrollCount = 0,
+              scrollMargin;
+      requestAnimationFrame(step);
+      function step () {
+          setTimeout(function() {
+              if ( window.scrollY != 0 ) {
+                      requestAnimationFrame(step);
+                  scrollCount = scrollCount + 1;
+                  scrollMargin = cosParameter - cosParameter * Math.cos( scrollCount * scrollStep );
+                  window.scrollTo( 0, ( scrollHeight - scrollMargin ) );
+              }
+          }, 15 );
+      }
+  }
+
+  // self executing function - must be at the end of body!!
+  (function() {
+    var colors = ["#B54568", "#4DB57A", "#4372B5", "#B54528", "#655CB5"]
+    var color = colors[Math.floor(colors.length * Math.random())]
+    var otherColor = colors[Math.floor(colors.length * Math.random())]
+    document.getElementById("intro").style.backgroundColor = color
+    var button = document.getElementById("less")
+    button.style.backgroundColor = otherColor
+
+    button.addEventListener("click", function(e) {
+      var article = document.getElementsByClassName("article_wrapper")[0]
+      scrollToTopEase(500)
+      setTimeout(function() { article.parentNode.removeChild(article) }, 680)
+    }, false);
+
+  })();
+  </script>
 
 </body>
 
