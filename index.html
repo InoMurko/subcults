@@ -99,6 +99,10 @@
       display: none;
     }
 
+    h1.title {
+      text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    }
+
     article h1, article h3, .footer h3 {
       font-family: "Sofia", "PT Serif", Georgia, "Times New Roman", serif;
     }
@@ -133,6 +137,11 @@
       margin: 0 auto;
     }
 
+    .footer a {
+      margin-bottom: 5px;
+      display: block;
+    }
+
     .footer.sunshine {
       padding: 60px 0;
       background: url('sunrays.png');
@@ -145,11 +154,11 @@
       padding: 60px 0;
       background-color: #142F4E;
       color: white;
-      border-bottom: 15px solid gray;
+      /*border-bottom: 15px solid gray;*/
     }
 
     button {
-      background-color: #5C5DCE;
+      background-color: white;
       color: white;
       padding: 20px 92px;
       border: 0;
@@ -224,7 +233,7 @@
 
 
 
-        <h1 id="title"> > <span>Becoming What We Are</span></h1>
+        <h1 class="title">Becoming What We Are</h1>
 
         <p>If you stroll through a large art museum, you will notice that Van Gogh does not paint the same world as Rembrandt, Picasso does not see things the way Goya did, Georgia O'Keefe doesn't much resemble Rivera, Salvador Dali looks like nobody but himself, and, in general, no world-class artist became a "classic" by doing what somebody else had already done or even what everybody else in his/her own era did.</p>
 
@@ -272,7 +281,6 @@
       <h2>More papers about happiness and other things</h2>
 
         <a href="papers/Mark S. Granovetter - The Strength of Weak Ties (1973).pdf">Mark S. Granovetter - The Strength of Weak Ties (1973)</a>
-        <br>
         <a href="papers/Stafford Beer - Designing Freedom (1995).pdf">Stafford Beer - Designing Freedom (1995)</a>
 
       <!-- <button>More</button> -->
@@ -281,9 +289,9 @@
 
     <div id="intro" class="footer other">
 
-      <h2>It is not hard...</h2>
+      <h2>It is not hard…</h2>
 
-      <p>The little house where I have come to live alone for a few weeks sits on the edge of a steep hill in a quiet village on the western coast of Chile. Huge majestic waves roll into the bay and crash magnificently over the rocks, sparkling white against the green sea under a winter sun. It is for me a time of peace, a time to clear the head, a time to treasure...</p>
+      <p>The little house where I have come to live alone for a few weeks sits on the edge of a steep hill in a quiet village on the western coast of Chile. Huge majestic waves roll into the bay and crash magnificently over the rocks, sparkling white against the green sea under a winter sun. It is for me a time of peace, a time to clear the head, a time to treasure…</p>
 
       <h3>from Designing Freedom</h3>
 
@@ -298,15 +306,9 @@
 
     <div class="footer greeting">
 
-      <h2>Thank you, come again</h2>
+      <h2>Come again</h2>
 
     </div>
-
-
-
-
-
-
 
   <script>
   // self executing function - must be at the end of body!!
@@ -317,11 +319,7 @@
     var colors = ["#B54568", "#4DB57A", "#4372B5", "#B54528", "#655CB5"]
     var color = colors[Math.floor(colors.length * Math.random())]
     document.getElementById("intro").style.backgroundColor = color
-
-    colors = ["#424294", "#3CB227", "#E68610"]
-    color = colors[Math.floor(colors.length * Math.random())]
     button.style.backgroundColor = color
-    document.getElementById("title").style.color = color
 
     button.addEventListener("click", function(e) {
       article.style.display = 'block';
