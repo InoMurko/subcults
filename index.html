@@ -147,9 +147,17 @@
       margin: 0 auto;
     }
 
-    .footer a {
-      margin-bottom: 5px;
-      display: block;
+    .footer ul {
+      list-style-type: none;
+    }
+
+    .footer ul li {
+      margin: 5px 0;
+    }
+
+    a:hover {
+      color: black;
+      font-weight: bold;
     }
 
     .footer.greeting {
@@ -289,9 +297,11 @@
 
       <h2>More papers about happiness and future</h2>
 
-        <a href="papers/Mark S. Granovetter - The Strength of Weak Ties (1973).pdf" target="_new">Mark S. Granovetter - The Strength of Weak Ties (1973)</a>
-        <a href="papers/Stafford Beer - Designing Freedom (1995).pdf" target="_new">Stafford Beer - Designing Freedom (1995)</a>
-        <a href="http://www.dni.gov/index.php/about/organization/global-trends-2030" target="_new">Global Trends 2030 (2012)</a>
+        <ul>
+        <li><a href="papers/Mark S. Granovetter - The Strength of Weak Ties (1973).pdf" target="_new">Mark S. Granovetter - The Strength of Weak Ties (1973)</a></li>
+        <li><a href="papers/Stafford Beer - Designing Freedom (1995).pdf" target="_new">Stafford Beer - Designing Freedom (1995)</a></li>
+        <li><a href="http://www.dni.gov/index.php/about/organization/global-trends-2030" target="_new">Global Trends 2030 (2012)</a></li>
+        </ul>
 
       <!-- <button>More</button> -->
 
@@ -306,9 +316,6 @@
       <h3>from Designing Freedom</h3>
 
     </div>
-
-
-
 
     <div class="footer simple arch">
 
@@ -471,9 +478,9 @@
   document.onreadystatechange = function () {
     var state = document.readyState
     if (state == 'interactive') {
-        //init()
+      //init()
     } else if (state == 'complete') {
-        initOnCompleteLoad()
+      initOnCompleteLoad()
     }
   }
 
@@ -482,7 +489,7 @@
     var button = document.getElementById("more")
     var article = document.getElementsByClassName("article_inner")[0]
 
-    var colors = ['#B54568', '#4DB57A', '#4372B5', '#B54528', '#655CB5']
+    var colors = ['#B54568', '#4DB57A', '#4372B5', '#B54528', '#655CB5', '#848693', '#34ADB8']
     var color = colors[Math.floor(colors.length * Math.random())]
     document.getElementById('intro').style.backgroundColor = color
     button.style.backgroundColor = color
