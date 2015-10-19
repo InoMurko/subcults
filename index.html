@@ -127,6 +127,14 @@
       color: white;
     }
 
+    .footer.thought div {
+      display: none;
+    }
+
+    .footer.thought div p.author {
+      margin-top: 10px;
+    }
+
     .footer.simple {
       padding: 0px;
       background-color: white;
@@ -315,16 +323,81 @@
 
     <div class="footer thought">
 
-    <h1>Random thought</h1>
+      <h1>Random thought</h1>
       <!-- <img src="sunshine.png" width="400px"> -->
-      <p>There is a time for being ahead,</p>
-      <p>A time for being behind;</p>
-      <p>A time for being in motion,</p>
-      <p>A time for being at rest;</p>
-      <p>A time for being vigorous,</p>
-      <p>A time for being exhausted;</p>
-      <p>A time for being safe,</p>
-      <p>A time for being in danger.</p>
+      <div>
+        <p>There is a time for being ahead,</p>
+        <p>A time for being behind;</p>
+        <p>A time for being in motion,</p>
+        <p>A time for being at rest;</p>
+        <p>A time for being vigorous,</p>
+        <p>A time for being exhausted;</p>
+        <p>A time for being safe,</p>
+        <p>A time for being in danger.</p>
+        <p class="author"><b>Lao-Tzu</b>, Tao Te Ching</p>
+      </div>
+
+      <div>
+        <p>I have approximate answers and possible beliefs and different degrees of certainty about different things, but I'm not absolutely sure of anything and of many things I don't know anything about. </p><p class="author"> <b>Richard Feynman</b></p>
+      </div>
+
+      <div>
+        <p>Achieving perfection is hard but remaining perfect is impossible. </p><p class="author"> <b>Faust</b></p>
+      </div>
+
+      <div>
+        <p>Only those who will risk going too far can possibly find out how far one can go. </p><p class="author"> <b>T.S. Eliot</b></p>
+      </div>
+
+      <div>
+        <p>The brighter you are, the more you have to learn.</p><p class="author"> <b>Don Herold</b></p>
+      </div>
+
+      <div>
+        <p>I am still learning.</p><p class="author"> <b>Michelangelo</b></p>
+      </div>
+
+      <div>
+        <p>The only difference between a mad man and me is that I'm not mad. </p><p class="author"> <b>Salvador Dali</b></p>
+      </div>
+
+      <div>
+        <p>Civilizastions advance by extending the number of important operations which we can perform without thinking about them.</p>
+        <p class="author"> <b>Alfred North Whitehead</b></p>
+      </div>
+
+      <div>
+        <p>They're trying to kill me," Yossarian told him calmly.</p>
+        <p>No one's trying to kill you," Clevinger cried.</p>
+        <p>Then why are they shooting at me?" Yossarian asked.</p>
+        <p>They're shooting at everyone," Clevinger answered. "They're trying to kill everyone."</p>
+        <p>And what difference does that make?</p>
+        <p class="author"><b>Joseph Heller</b>, Catch 22</p>
+      </div>
+
+      <div>
+        <p>Nothing can be frozen and kept that way. Everything keeps changing. There are no final frontiers. </p><p class="author"> <b>Jacque Fresco</b></p>
+      </div>
+
+      <div>
+        <p>Are you really sure that a floor can't also be a ceiling? </p><p class="author"> <b>M. C. Escher</b></p>
+      </div>
+
+      <div>
+        <p>Someday you will be old enough to start reading fairy tales again. </p><p class="author"> <b>C. S. Lewis</b></p>
+      </div>
+
+      <div>
+        <p>The world doesn't make sense so why should I paint pictures that do. </p><p class="author"> <b>Pablo Picasso</b></p>
+      </div>
+
+      <div>
+        <p>I begin with an idea and then it becomes something else. </p><p class="author"> <b>Pablo Picasso</b></p>
+      </div>
+
+      <div>
+        <p>When in doubt, be weird</p>
+      </div>
 
     </div>
 
@@ -335,6 +408,14 @@
     </div>
 
   <script>
+  function dayOfYear() {
+    var now = new Date();
+    var start = new Date(now.getFullYear(), 0, 0);
+    var diff = now - start;
+    var oneDay = 1000 * 60 * 60 * 24;
+    var day = Math.floor(diff / oneDay);
+    return day;
+  }
   // self executing function - must be at the end of body!!
   (function() {
     var button = document.getElementById("more")
@@ -344,6 +425,11 @@
     var color = colors[Math.floor(colors.length * Math.random())]
     document.getElementById('intro').style.backgroundColor = color
     button.style.backgroundColor = color
+
+    var thoughts = document.querySelectorAll(".thought div")
+    var randomThought = thoughts[dayOfYear() % thoughts.length]
+    //randomThought = thoughts[Math.floor(thoughts.length * Math.random())]
+    randomThought.style.display = 'block';
 
     button.addEventListener('click', function(e) {
       article.style.display = 'block';
