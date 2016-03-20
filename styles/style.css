@@ -25,18 +25,82 @@
 body {
   margin: 0;
   padding: 0;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+img.bg {
+  /* Set rules to fill background */
+  min-height: 100%;
+  /*min-width: 1024px;*/
+
+  /* Set up proportionate scaling */
+  width: 100%;
+  /*height: auto;*/
+
+  /* Set up positioning */
+  /*position: fixed;*/
+  top: 0;
+  left: 0;
+}
+
+/*@media screen and (max-width: 1024px) {
+  img.bg {
+    left: 50%;
+    margin-left: -512px;
+  }
+}*/
+
+@media screen and (max-width: 1850px) {
+  img.bg {
+    width: auto;
+    /*display: none;*/
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  img.bg {
+    margin-left: -300px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  img.bg {
+    margin-left: -512px;
+  }
+}
+
+.symbol {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.topmain {
+  /*background: #C7C7C7 url('bg.jpg') top no-repeat;*/
+  /*height: 960px;*/
+  /*background-size: cover;*/
+  padding: 0;
+  margin: 0;
+}
+
+.main {
+  position: relative;
+  background: #C7C7C7 url('img/bg3.jpg') top no-repeat;
+  /*background-color: #68737F;*/
+  text-align: center;
+  height: 630px;
+  padding: 150px 0 180px 0;
+  margin: 0;
 }
 
 .main .control_box {
-  display: none;
+  /*display: none;*/
   position: absolute;
   right: 20px;
   top: 20px;
   width: 200px;
   height: 100px;
   background-color: #377DA2;
-  opacity: 0.85;
+  opacity: 0.8;
   border-radius: 15px;
 }
 
@@ -61,13 +125,6 @@ body {
 /*WISTIA*/
 .video div {
   margin: 0 auto;
-}
-
-.main {
-  background: #C7C7C7 url('bg.jpg') top no-repeat;
-  text-align: center;
-  padding: 150px 0 180px 0;
-  margin: 0;
 }
 
 .box {
@@ -113,7 +170,8 @@ article blockquote {
 }
 
 h1#title {
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  /*color: #5457A5;*/
+  /*text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;*/
 }
 
 article h1, article h3, .section h3, .section.thought h1 {
