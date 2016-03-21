@@ -82,6 +82,16 @@ img.bg {
   margin: 0;
 }
 
+.label {
+  padding: 5px 10px;
+  color: white;
+  margin-left: 10px;
+}
+
+.label.green {
+  background-color: #5457A5;
+}
+
 .main {
   position: relative;
   background: #C7C7C7 url('img/bg3.jpg') top no-repeat;
