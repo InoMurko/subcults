@@ -99,11 +99,9 @@
         <li><a href="others">Find The Others (Timothy Leary, 1976)</a></li>
         <li><a href="becoming">Becoming What We Are (Robert Anton Wilson, 1980)</a></li>
         <li><a href="optimism">Ten Good Reasons To Get Out Of Bed In The Morning (Robert Anton Wilson, 1977)</a></li>
-        <!-- <li><a href="others.html">Find The Others (Timothy Leary)</a></li> -->
         <li><a href="science">What Is Science? (Richard Feynman, 1966)</a></li>
         <li><a href="rationalism">Why I Am A Rationalist (Bertrand Russell, 1960)</a></li>
         <li><a href="research">You And Your Research (Richard Hamming, 1986)</a></li>
-        <!-- <li><a href="idleness.html">In Praise of Idleness (Bertrand Russell, 1932)</a></li> -->
         </ul>
 
       <h2>Watch</h2>
@@ -120,18 +118,10 @@
       <ul>
         <li><a href="daydream">Daydream: We now realize that daydreaming can break you or make you</a></li>
         <li><a href="https://medium.com/@davidhq/what-is-ethereum-caeb8f99cdff">Ethereum: The Road Ahead</a></li>
-        <li><a href="wiki/Code-Collaboration.pdf"><b>Extraverse:</b> Turn any folder on your computer into a magic window</a><span class="label green">DEVELOPERS</span></li>
+        <li><a href="wiki/Code-Collaboration.pdf"><b>Extraverse:</b> Turn any folder on your computer into a magic window</a><span id="devtag1" class="label random">DEVELOPERS</span></li>
         <li><a href="papers">Research papers</a></li>
       </ul>
 
-      <!--<h2>More</h2>
-
-       <ul>
-        <li><a href="papers/Mark S. Granovetter - The Strength Of Weak Ties (1973).pdf" target="_new">The Strength of Weak Ties (Mark S. Granovetter, 1973)</a></li>
-        <li><a href="papers/Albert Ellis - General Semantics And Rational-Emotive Therapy (1991).pdf" target="_new">General Semantics and Rational-Emotive Therapy (Albert Ellis, 1991)</a></li>
-      </ul> -->
-
-      <!-- <button>More</button> -->
 
     </div>
 
@@ -188,16 +178,9 @@
     <img src="img/balls.jpg" width="100%" style="margin-bottom: -3px">
     </div>
 
-    <!-- <div class="section simple arch">
-
-      <img src="architecture.png">
-
-    </div> -->
-
     <div class="section thought">
 
       <h1>Random thought</h1>
-      <!-- <img src="sunshine.png" width="400px"> -->
       <div>
         <p>There is a time for being ahead,</p>
         <p>A time for being behind;</p>
@@ -280,137 +263,13 @@
 
     <div class="section greeting">
 
-      <!-- <h2>Come again</h2> -->
-      <h2>Learn something new every day<!--  → <a href="#">Hiring</a> --></h2>
+      <h2>Learn something new every day</h2>
 
 
     </div>
 
-  <script>
-
-  function setArticleOpacity() {
-    var opacity = (Math.min(230, Math.max(0, getWindowSize().height - getWindowOffset(document.getElementById('title')).y - 55)) / 230.0).toFixed(2)
-    var element = document.getElementById('article');
-    element.style.opacity = opacity.toString();
-    element.style.filter  = 'alpha(opacity=' + (100*opacity).toString() + ')'; // IE fallback
-  }
-
-  function onScrollEventHandler(ev) {
-    setArticleOpacity()
-  }
-
-  function getWindowSize() {
-    var elem = (document.compatMode === "CSS1Compat") ? document.documentElement : document.body;
-
-    return {
-      height: elem.clientHeight,
-      width: elem.clientWidth
-    }
-  }
-
-  function getPosition(element) {
-    var xPosition = 0,
-        yPosition = 0;
-
-    while (element) {
-      xPosition += (element.offsetLeft + element.clientLeft);
-      yPosition += (element.offsetTop + element.clientTop);
-      element = element.offsetParent;
-    }
-
-    return {
-      x: xPosition,
-      y: yPosition
-    };
-  }
-
-  function getScroll() {
-    return {
-      x: document.documentElement.scrollLeft || document.body.scrollLeft,
-      y: document.documentElement.scrollTop || document.body.scrollTop
-    };
-  }
-
-  function getWindowOffset(element) {
-    var pos = getPosition(element),
-        scroll = getScroll();
-
-    return {
-      x: (pos.x - scroll.x),
-      y: (pos.y - scroll.y)
-    };
-  }
-
-  function dayOfYear() {
-    var now = new Date();
-    var start = new Date(now.getFullYear(), 0, 0);
-    var diff = now - start;
-    var oneDay = 1000 * 60 * 60 * 24;
-    var day = Math.floor(diff / oneDay);
-    return day;
-  }
-
-  // document.onreadystatechange = function () {
-  //   var state = document.readyState
-  //   if (state == 'interactive') {
-  //     //init()
-  //   } else if (state == 'complete') {
-  //     initOnCompleteLoad()
-  //   }
-  // }
-
-  var YOUTUBE_IFRAME=`<iframe width="840" height="473" src="https://www.youtube.com/embed/videoseries?list=#{id}" frameborder="0" allowfullscreen></iframe>`
-
-  var WISTIA_IFRAME=`<iframe src="//fast.wistia.net/embed/iframe/#{id}" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="640" height="480"></iframe><script src="//fast.wistia.net/assets/external/E-v1.js" async>`
-
-  // MAIN function
-  var initOnCompleteLoad = function() {
-    var button = document.getElementById("more")
-    var article = document.getElementsByClassName("article_inner")[0]
-
-    // random video
-    // id: 'PLwik5wPffiuLtBh3C2MPInRbhZRspwYFS', provider: 'youtube', list: true
-    // id: 'v01bzsviws', provider: 'wistia'
-
-    // random colors
-    var colors = ['#B54568', '#4DB57A', '#4372B5', '#B54528', '#655CB5', '#34ADB8'] //'#848693'
-    var color = colors[Math.floor(colors.length * Math.random())]
-    document.getElementById('intro').style.backgroundColor = color
-    button.style.backgroundColor = color
-    document.getElementById('title').style.color = color
-
-    // random excerpt
-    var excerpts = document.querySelectorAll(".excerpt div")
-    var randomExcerpt = excerpts[dayOfYear() % excerpts.length]
-    randomExcerpt.style.display = 'block';
-
-    // random thought
-    var thoughts = document.querySelectorAll(".thought div")
-    var randomThought = thoughts[dayOfYear() % thoughts.length]
-    randomThought.style.display = 'block';
-
-    // expand the article and show einstein photo
-    button.addEventListener('click', function(e) {
-      article.style.display = 'block';
-      //document.getElementById('einstein').style.display = 'block';
-      button.style.display = 'none';
-    }, false);
-
-    // article opacity on scrolling
-    setArticleOpacity()
-    var el = window;
-    if(el.addEventListener)
-        el.addEventListener('scroll', onScrollEventHandler, false);
-    else if (el.attachEvent)
-        el.attachEvent('onscroll', onScrollEventHandler);
-
-  }
-
-  (function() {
-   initOnCompleteLoad()
-  })();
-
-  </script>
+    <!-- Include our script files -->
+    <script src="/js/script.js"></script>
 
 </body>
 

@@ -88,8 +88,12 @@ img.bg {
   margin-left: 10px;
 }
 
-.label.green {
+.label.developer {
   background-color: #5457A5;
+}
+
+.label.random {
+  /* handled by js */
 }
 
 .main {
