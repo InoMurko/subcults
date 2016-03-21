@@ -1,5 +1,7 @@
+.revdep
+.predeploy
 .deploy
-alternity
 todo.txt
 papers
 wiki
+nginx.conf
