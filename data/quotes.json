@@ -1,10 +1,70 @@
 [
   {
     "author": "Franjo Zizek",
-    "quote": "Let them look, maybe they will learn something."
+    "quote": ["Let them look, maybe they will learn something."]
   },
   {
-    "author": "George Orwell",
-    "quote": "Fishing is the opposite of war."
+    "author": "Richard Feynman",
+    "quote": ["I have approximate answers and possible beliefs and different degrees of certainty about different things, but I'm not absolutely sure of anything and of many things I don't know anything about. "]
+  },
+  {
+    "author": "Faust",
+    "quote": ["Achieving perfection is hard but remaining perfect is impossible. "]
+  },
+  {
+    "author": "T.S. Eliot",
+    "quote": ["Only those who will risk going too far can ", "possibly find out how far one can go.  "]
+  },
+  {
+    "author": "Don Herold",
+    "quote": ["The brighter you are, the more you have to learn. "]
+  },
+  {
+    "author": "Michelangelo",
+    "quote": ["I am still learning. "]
+  },
+  {
+    "author": "Salvador Dali",
+    "quote": ["The only difference between a mad man and me is that I'm not mad. "]
+  },
+  {
+    "author": "Alfred North Whitehead",
+    "quote": ["Civilizations advance by extending the number of important operations which we can perform without thinking about them. "]
+  },
+  {
+    "author": "Joseph Heller, Catch 22",
+    "quote": ["'They're trying to kill me,' Yossarian told him calmly.",
+            "'No one's trying to kill you,' Clevinger cried.",
+            "'Then why are they shooting at me?' Yossarian asked.",
+            "'They're shooting at everyone,' Clevinger answered.",
+            "'They're trying to kill everyone.' And what difference does that make?"]
+  },
+  {
+    "author": "Jacque Fresco",
+    "quote": ["Nothing can be frozen and kept that way. Everything keeps changing. There are no final frontiers. "]
+  },
+  {
+    "author": "M. C. Escher",
+    "quote": ["Are you really sure that a floor can't also be a ceiling? "]
+  },
+  {
+    "author": "C. S. Lewis",
+    "quote": ["Someday you will be old enough to start reading fairy tales again. "]
+  },
+  {
+    "author": "Pablo Picasso",
+    "quote": ["The world doesn't make sense so why should I paint pictures that do. "]
+  },
+  {
+    "author": "Pablo Picasso",
+    "quote": ["I begin with an idea and then it becomes something else. "]
+  },
+  {
+    "author": "Timothy Leary",
+    "quote": ["The more conscious and intelligent you become, the more you want to become even more conscious and intelligent."]
+  },
+  {
+    "author": "Faraday",
+    "quote": ["But still try, for who knows what is possible?"]
   }
 ]
